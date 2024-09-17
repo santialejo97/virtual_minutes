@@ -1,0 +1,61 @@
+.content {
+  display: flex;
+  margin: 20px 60px 20px 60px;
+  justify-content: space-between;
+}
+
+.content .left-side {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.content .left-side {
+  border-right: 2px solid grey;
+}
+
+.content .left-side .detail {
+  margin: 14px;
+  text-align: center;
+}
+
+.content .left-side .detail i {
+  font-size: 30px;
+  color: #695cfe;
+}
+
+.content .left-side .detail .topic {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.content .right-side {
+  width: 75%;
+  margin-left: 75px;
+}
+
+.right-side .input-box {
+  height: 50px;
+  width: 100%;
+  margin: 12px;
+}
+
+.right-side .input-box input,
+.right-side .input-box textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: #f0f1f8;
+  font-size: 16px;
+  padding: 0 15px;
+  resize: none;
+}
+
+.right-side .input-box .message-box {
+  min-height: 110px;
+  height: 100%;
+}

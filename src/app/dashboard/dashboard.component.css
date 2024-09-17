@@ -1,0 +1,132 @@
+:root {
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #ddd;
+  --text-color: #707070;
+}
+
+.dashboard {
+  display: flex;
+  height: 100%;
+}
+
+.view {
+  margin: 20px;
+  width: 100%;
+}
+
+.sidebar .text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #707070;
+}
+
+.sidebar .image {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* sibedar */
+.sidebar {
+  position: static;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background: #fff;
+}
+
+.sidebar header {
+  position: relative;
+}
+
+.sidebar .image-text img {
+  width: 40px;
+  border-radius: 6px;
+}
+
+.sidebar header .image-text {
+  display: flex;
+  align-items: center;
+}
+
+header .image-text .header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text .name {
+  font-weight: 600;
+}
+
+.header-text .profession {
+  margin-top: -2px;
+}
+
+.sidebar header .toggle {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  height: 25px;
+  width: 25px;
+  background: #695cfe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+}
+
+.sidebar li {
+  height: 50px;
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  font-size: 20px;
+}
+
+.sidebar li .icons,
+.sidebar li .text {
+  color: #707070;
+  transition: all 0.2 ease;
+}
+
+.sidebar li p {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  gap: 2px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar li p:hover {
+  background: #695cfe;
+}
+
+.sidebar li p:hover .icons,
+.sidebar li p:hover .text {
+  color: #ddd;
+}
+
+.sidebar .menu-bar {
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

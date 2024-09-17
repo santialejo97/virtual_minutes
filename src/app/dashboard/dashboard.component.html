@@ -1,0 +1,46 @@
+<section class="dashboard">
+  <nav class="sidebar">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="" alt="logo" />
+        </span>
+        <div class="text header-text">
+          <span class="name">CodingLab</span>
+          <span class="profession">web Develop</span>
+        </div>
+      </div>
+      <i class="fa-solid fa-chevron-right toggle"></i>
+    </header>
+    <div class="menu-bar">
+      <div class="menu">
+        <ul class="menu-limks">
+          <li class="nav-link" routerLink="/dashboard">
+            <p>
+              <i class="fa-solid fa-house icons"></i>
+              <span class="text nav-text"> Dashboard </span>
+            </p>
+          </li>
+          <li class="nav-link" routerLink="/dashboard/minute">
+            <p>
+              <i class="fa-solid fa-clock icons"></i>
+              <span class="text nav-text"> Virtual Minutes </span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-content">
+        <li routerLink="/auth">
+          <p>
+            <i class="fa-solid fa-arrow-right-from-bracket icons"></i>
+            <span class="text nav-text">Logout</span>
+          </p>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="view">
+    <router-outlet class="w-full"></router-outlet>
+  </section>
+</section>
