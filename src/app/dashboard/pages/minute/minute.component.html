@@ -1,52 +1,101 @@
-<section class="bg-blue-400 m-10 p-5 rounded">
-  <div class="flex justify-between mb-6">
-    <h1>Virtual Minute</h1>
-    <p>Fecha <span></span></p>
+<section class="p-7" class="layout">
+  <div class="m-5 flex items-center">
+    <i class="fa-solid fa-book-bookmark fa-2xl"></i>
+    <h1 class="m-3">Minuta Virtual</h1>
   </div>
-  <hr />
-  <div class="mb-6">
-    <div class="content">
-      <div class="left-side">
-        <div class="detail-user detail">
-          <i class="fa-solid fa-user-pen"></i>
-          <div class="text-detail topic">Detail User</div>
-        </div>
-        <div class="detail-comment detail">
-          <i class="fa-solid fa-comments"></i>
-          <div class="text-comment topic">Comment</div>
-        </div>
-        <div class="detail-signature detail">
-          <i class="fa-solid fa-signature"></i>
-          <div class="text-signature topic">Signature</div>
-        </div>
+  <form nz-form [formGroup]="formMinute" (ngSubmit)="send()">
+    <!--  Formulario -->
+    <div class="item">
+      <div class="field">
+        <label for="fullName">Nombres y Apellidos</label>
+        <input
+          type="text"
+          formControlName="fullName"
+          id="fullName"
+          placeholder="Nombre completo del vigilante"
+        />
       </div>
-      <div class="right-side">
-        <form>
-          <div class="input-box">
-            <input type="text" placeholder="" />
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="" />
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="" />
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="" />
-          </div>
-          <div class="input-box">
-            <input type="text" placeholder="" />
-          </div>
-          <div class="input-box message-box">
-            <textarea name="" id=""></textarea>
-          </div>
-          <!-- TODO CREAR CAMPO DE FIRMA -->
-
-          <div class="button">
-            <button type="button">Send Now !!! hola</button>
-          </div>
-        </form>
+      <div class="field">
+        <label for="workstation">Puesto de Trabajo</label>
+        <input
+          type="text"
+          formControlName="workstation"
+          id="workstation"
+          placeholder="Puesto de trabajo del vigilante"
+        />
       </div>
     </div>
-  </div>
+    <div class="item">
+      <div class="field">
+        <label for="guardBadge">Placa Vigilante</label>
+        <input
+          type="text"
+          formControlName="guardBadge"
+          id="guardBadge"
+          placeholder="Placa del vigilante completa"
+        />
+      </div>
+      <div class="field">
+        <label for="charge">Cargo / Funcion</label>
+        <select id="charge" formControlName="charge">
+          <option selected disabled>Seleccionar Cargo o Funcion</option>
+          <option value="">User</option>
+        </select>
+      </div>
+    </div>
+    <div class="item">
+      <div class="field">
+        <label for="issue">Asunto</label>
+        <select id="issue" formControlName="issue">
+          <option selected disabled>Seleccionar Asunto</option>
+          <option value="">User</option>
+        </select>
+      </div>
+    </div>
+    <div class="item">
+      <div class="field">
+        <label for="description">Descripción</label>
+        <textarea
+          placeholder="Descripcion de la minuta"
+          id="description"
+          formControlName="description"
+          rows="10"
+        ></textarea>
+      </div>
+    </div>
+    <div class="item">
+      <div class="field">
+        <label for="description">Firma</label>
+        <canvas
+          #canvas
+          width="400"
+          height="200"
+          style="border: 1px solid #000"
+        ></canvas>
+      </div>
+
+      <div
+        class="field signature_photo"
+        style="
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+        "
+      >
+        <button class="photo" type="button">
+          <i
+            class="fa-solid fa-camera-retro fa-2xl"
+            style="--fa-primary-opacity: 1"
+          ></i>
+        </button>
+        <p>Tomar foto del guardia</p>
+      </div>
+    </div>
+    <div class="buttons">
+      <button type="button" class="cancel">Cancelar</button>
+      <button type="button" class="save">Guardar</button>
+      <button type="submit" class="send">Enviar</button>
+    </div>
+  </form>
 </section>
